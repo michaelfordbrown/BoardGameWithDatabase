@@ -1,0 +1,71 @@
+﻿@model IEnumerable<BoardGame.Models.Tblboardsquaresv2>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Northwall)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Southwall)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Westwall)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Eastwall)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Colposition)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Rowposition)
+                </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Player)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Northwall)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Southwall)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Westwall)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Eastwall)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Colposition)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rowposition)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Player.Facingdirection)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

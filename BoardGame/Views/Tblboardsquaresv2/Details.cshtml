@@ -1,0 +1,60 @@
+﻿@model BoardGame.Models.Tblboardsquaresv2
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Tblboardsquaresv2</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Northwall)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Northwall)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Southwall)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Southwall)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Westwall)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Westwall)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Eastwall)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Eastwall)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Colposition)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Colposition)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Rowposition)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Rowposition)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Player)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Player.Facingdirection)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
